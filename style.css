@@ -10,7 +10,10 @@ html {
   scroll-behavior: smooth;
   font-size: 62.5%;
 }
-
+body {
+  position: relative;
+  overflow-x: hidden;
+}
 /* Global Styles */
 
 h1 {
@@ -69,8 +72,28 @@ body {
   top: 0;
   left: 0;
 }
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 0;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.6);
+  backdrop-filter: blur(3px);
+  z-index: 3;
+  display: none;
+  opacity: 0;
+  transition: 3s;
+}
 .nav-bar {
   display: flex;
+}
+.bi-list {
+  font-size: 4rem;
+  display: none;
+}
+.bi-x-lg {
+  display: none;
 }
 .nav-links {
   list-style: none;
@@ -403,23 +426,84 @@ body {
 }
 #news-letter input {
   height: 3.125rem;
-  padding-inline: 0 1.25rem;
+  padding: 1.2rem;
   font-size: 1.4rem;
   width: 100%;
-  border-radius: 0.4rem;
+  /* border-radius: 0.4rem; */
+  border-radius: 0 1rem 1rem 0;
+  border: 0.1rem solid;
 }
 .form {
-  display: grid;
-  grid-template-columns: 1fr 3fr;
-  gap: 1rem;
+  display: flex;
+  grid-template-columns: 1fr 5fr;
+  margin: 0;
 }
-.form button {
-  padding: 1rem 2rem;
+.form span {
+  padding: 0.9rem;
   background-color: #088178;
   border: none;
-  border-radius: 1rem;
+  border-radius: 1rem 0 0 1rem;
   color: #fff;
   font-weight: 500;
   transition: 0.3s;
   display: block;
+  cursor: pointer;
+}
+.form button:hover {
+  color: #088178;
+  background-color: #fff;
+}
+footer {
+  display: grid;
+  grid-template-columns: 3fr 1fr 1fr 2fr;
+}
+.follow {
+  margin-top: 2.8rem;
+}
+.grid-col img {
+  padding-bottom: 2.8rem;
+}
+.icons {
+  display: flex;
+  gap: 1rem;
+  margin-top: 2rem;
+}
+.icons a {
+  font-size: 2.8rem;
+  color: #818ea0;
+}
+.grid-col a:link,
+.grid-col a:visited {
+  text-decoration: none;
+}
+.grid-col h4 {
+  margin-bottom: 3rem;
+}
+.grid-col ul li a {
+  list-style: none;
+  font-size: 1.6rem;
+  color: #465b52;
+  margin: 1.5rem 0 2rem 0;
+  transition: 0.3s;
+}
+.grid-col ul li a:hover,
+.grid-col ul li a:active {
+  color: #32453d;
+  font-size: 1.8rem;
+}
+.grid-col ul li {
+  margin-bottom: 1rem;
+}
+.grid-col ul {
+  list-style: none;
+}
+.app {
+  display: flex;
+  gap: 1rem;
+}
+.app img {
+  border: 0.1rem solid #465b52;
+  padding: 0;
+  margin: 0;
+  border-radius: 0.5rem;
 }
