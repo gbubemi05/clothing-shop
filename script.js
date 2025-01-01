@@ -12,3 +12,15 @@ mobileClose.addEventListener("click", () => {
   mobileNav.classList.remove("active");
   overLay.classList.remove("active");
 });
+
+const obj = {
+  Name: "gbubemi",
+  workingDays: {
+    fri: {
+      open: 11,
+      close: 11,
+    },
+  },
+};
+const { fri } = workingDays;
+console.log(open, close);
