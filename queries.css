@@ -83,15 +83,22 @@
   }
   .bannerbox-sm-grid {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: 1fr;
     gap: 2rem;
   }
   .banner-box-sm {
     width: 100%;
   }
-  .banner-sm3 {
+  /* .banner-sm3 {
     grid-column: span 2;
+  } */
+  footer {
+    grid-template-columns: 1fr;
+    gap: 3rem;
   }
 }
 @media (max-width: 59em) {
+  .bannerbox-sm-grid {
+    grid-template-columns: 1fr;
+  }
 }
