@@ -1,4 +1,4 @@
-@media (max-width: 69em) {
+@media (min-width: 69em) {
   html {
     font-size: 50%;
   }
@@ -26,10 +26,11 @@
     width: 40rem;
     z-index: 10;
     opacity: 0;
-    visibility: visible;
+    visibility: none;
     box-shadow: 0 4rem 6rem rgba(0, 0, 0, 0.1);
   }
   .nav-bar.active {
+    display: flex;
     right: 0;
     opacity: 1;
   }
@@ -100,7 +101,7 @@
     gap: 3rem;
   }
 }
-@media (max-width: 59em) {
+@media (min-width: 59em) {
   .bannerbox-sm-grid {
     grid-template-columns: 1fr;
   }
