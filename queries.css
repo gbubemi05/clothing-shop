@@ -5,6 +5,9 @@
   #header {
     padding: 2rem 5rem;
   }
+  body {
+    overflow-x: none;
+  }
 
   .nav-bar {
     flex-direction: column;
