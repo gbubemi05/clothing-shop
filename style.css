@@ -52,9 +52,6 @@ p {
   margin: 4rem 0;
 }
 
-body {
-  width: 100%;
-}
 .container {
   width: 130rem;
   margin: 0 auto;
@@ -69,6 +66,7 @@ body {
   box-shadow: 0 0.5rem 1.8rem rgba(0, 0, 0, 0.05);
   z-index: 999;
   position: sticky;
+  width: 100%;
   top: 0;
   left: 0;
 }
@@ -428,9 +426,8 @@ body {
   height: 3.125rem;
   padding: 1.2rem;
   font-size: 1.4rem;
-  width: 100%;
-  /* border-radius: 0.4rem; */
-  border-radius: 0 1rem 1rem 0;
+  width: 50rem;
+
   border: 0.1rem solid;
 }
 .form {
@@ -438,15 +435,16 @@ body {
   grid-template-columns: 1fr 5fr;
   margin: 0;
 }
-.form span {
+.form button {
   padding: 0.9rem;
   background-color: #088178;
   border: none;
-  border-radius: 1rem 0 0 1rem;
   color: #fff;
   font-weight: 500;
   transition: 0.3s;
   display: block;
+  width: 10rem;
+
   cursor: pointer;
 }
 .form button:hover {
@@ -506,4 +504,90 @@ footer {
   padding: 0;
   margin: 0;
   border-radius: 0.5rem;
+}
+/* /////the shop page////// */
+#shop {
+  text-align: center;
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  background-image: url(img/banner/b1.jpg);
+  height: 40vh;
+}
+#shop p,
+#shop h2 {
+  color: #fff;
+}
+#pagination {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#pagination a {
+  text-decoration: none;
+  color: #fff;
+  font-size: 1.8rem;
+  font-weight: 500;
+  border: none;
+  margin-right: 2rem;
+  background-color: #088178;
+  padding: 1rem;
+  height: 3.2rem;
+  width: 3.2rem;
+}
+
+/* /////single product/// */
+#product-details {
+  display: flex;
+}
+#product-details .single-pro-img {
+  width: 40%;
+  margin-right: 5rem;
+}
+.single-pro-details {
+  width: 50%;
+}
+.small-img-g {
+  display: flex;
+  justify-content: space-between;
+}
+.small-img {
+  flex-basis: 24%;
+  cursor: pointer;
+}
+.single-pro-details {
+  display: flex;
+  flex-direction: column;
+}
+.single-pro-details h4 {
+  padding: 4rem 0 2rem 0;
+}
+.single-pro-details h2 {
+  font-size: 2.6rem;
+}
+.single-pro-details select {
+  padding: 1rem 1.5rem;
+  margin-bottom: 1rem;
+  display: block;
+  width: fit-content;
+}
+.single-pro-details input {
+  width: 5rem;
+  display: block;
+  height: 4.7rem;
+  padding-left: 1rem;
+  font-weight: 500;
+}
+
+.single-pro-details button {
+  width: fit-content;
+  padding: 1.2rem 3.2rem;
+  margin-top: 3rem;
+  background-color: #088178;
+  color: #fff;
+  border: none;
+}
+.single-pro-details p {
+  line-height: 2.5rem;
 }

@@ -1,9 +1,11 @@
-@media (min-width: 69em) {
+@media (max-width: 69em) {
   html {
     font-size: 50%;
+    overflow-x: hidden;
   }
   #header {
     padding: 2rem 5rem;
+    width: 100%;
   }
   body {
     overflow-x: none;
@@ -16,6 +18,7 @@
     position: absolute;
     top: 0rem;
     /* left: 30%; */
+
     padding-top: 9rem;
     right: -40rem;
     padding-left: 3rem;
@@ -27,6 +30,7 @@
     z-index: 10;
     opacity: 0;
     visibility: none;
+    /* display: none; */
     box-shadow: 0 4rem 6rem rgba(0, 0, 0, 0.1);
   }
   .nav-bar.active {
@@ -100,9 +104,24 @@
     grid-template-columns: 1fr;
     gap: 3rem;
   }
-}
-@media (min-width: 59em) {
-  .bannerbox-sm-grid {
-    grid-template-columns: 1fr;
+  #news-letter {
+    flex-direction: column;
+  }
+  .form {
+    flex-direction: column;
+  }
+  .form input {
+    text-align: center;
+  }
+
+  .form button {
+    margin-top: 1.3rem;
+    /* border-radius:  1rem; */
+    align-self: center;
+  }
+  @media (max-width: 59em) {
+    .bannerbox-sm-grid {
+      grid-template-columns: 1fr;
+    }
   }
 }
